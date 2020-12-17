@@ -10,22 +10,10 @@ int main() {
     char character;
     cout << "input character: ";
     cin >> character;
-    string str2 = "";
     while (file1 >> str1) {
-        int i = 0;
-        while (i < str1.length()) {
-            if (str1[i] != ' ') {
-                str2.push_back(str1[i]);
-                i++;
-            } else {
-                str2.clear();
-                i++;
-            }
-            if (str2[0] == character) {
-                cout << str2 << endl;
-                i++;
+            if (str1[0] == character) {
+                cout << str1 << endl;
             }
         }
-    }
     file1.close();
 }
